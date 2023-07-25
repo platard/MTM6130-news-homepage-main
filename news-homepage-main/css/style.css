@@ -48,6 +48,7 @@ header{
 }
 .main-menu{
     display: flex;
+    align-self: center;
 }
 .hamburger-menu{
     align-self: center;
@@ -56,8 +57,36 @@ header{
     display: none;
 }
 
+/* New section */
+.new{
+    background-color: black;
+    padding: 10px;
+}
+
+.new h2{
+    color: hsl(35, 77%, 62%);
+    font-weight: 800;
+}
+
+.new h3{
+    color: hsl(36, 100%, 99%);
+    font-weight: 700;
+    margin-top: 20px;
+}
+.new p{
+    color: hsl(233, 8%, 79%);
+    margin-bottom: 10px;
+}
+
+.new .post{
+    border-bottom: 1px solid hsl(233, 8%, 79%);
+}
 
 
+/* Ordered list of posts */
+.posts .post{
+    display: flex;
+}
 
 
 
@@ -81,15 +110,44 @@ header{
         margin: 5px 10px;
         padding: 5px 10px;
     }
-    /* nav{
-        align-items: center;
-    } */
-
+   
     /* Hero */
     .hero-desktop{
         display: block;
     }
     .hero-mobile{
         display: none;
+    }
+
+    /* layout */
+    main{
+        display: grid;
+        grid-template-areas:
+        "hero hero new"
+        "posts posts posts"
+        ;
+    }
+
+    .hero{
+        grid-area: hero;
+    }
+
+    .hero-description{
+        display: flex;
+    }
+
+    .hero-description h1, .hero-description div{
+        flex: 1 1 0;
+    }
+
+    .new{
+        grid-area: new;
+    }
+    .posts{
+        grid-area: posts;
+        display: flex;
+    }
+    section{
+        margin: 10px;
     }
 }

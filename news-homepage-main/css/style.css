@@ -1,0 +1,95 @@
+/* General styles */
+*{
+   box-sizing: border-box; 
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+body p {
+    font-size: 15px;
+}
+
+.container{
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav {
+    display: none;
+}
+
+h1, h2, h3{
+    margin-bottom: 10px;
+}
+h1{
+    font-size: 28px;
+}
+h2{
+    font-size: 24px;
+}
+h3{
+    font-size: 20px;
+}
+img{
+    max-width: 100%;
+}
+
+/* Header */
+header{
+    display: flex;
+    justify-content: space-between;
+}
+.main-menu{
+    display: flex;
+}
+.hamburger-menu{
+    align-self: center;
+}
+.hero-desktop{
+    display: none;
+}
+
+
+
+
+
+
+
+/* Desktop */
+@media screen and (min-width:768px){
+    .container{
+        max-width: 1440px;
+    }
+    nav{
+        display:block;
+    }
+    .hamburger-menu{
+        display: none;
+    }
+    nav ul {
+        display: flex;
+    }
+
+    nav a{
+        margin: 5px 10px;
+        padding: 5px 10px;
+    }
+    /* nav{
+        align-items: center;
+    } */
+
+    /* Hero */
+    .hero-desktop{
+        display: block;
+    }
+    .hero-mobile{
+        display: none;
+    }
+}
